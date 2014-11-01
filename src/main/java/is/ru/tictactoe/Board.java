@@ -63,4 +63,24 @@ public int mode()
 
     	return 0;
     }
+
+    public void PrintTheBoard()
+	{
+		
+		System.out.println("        "+"_______");
+		
+		for(int i = 1; i < 4; i ++)
+		{
+			System.out.print("        "+"|");
+			
+			for(int j = 1; j < 4; j++)
+			{
+				System.out.print(board[i][j] + "|");
+				
+			}
+			System.out.println();
+		}
+		
+		System.out.println("        "+"_______");
+	}
 }
