@@ -69,6 +69,7 @@ public int mode()
     	return 0;
     }
 
+
     	public static int isBoardFull()
 	{
 		for(int i = 1; i < 4; i++)
@@ -82,6 +83,7 @@ public int mode()
 			}
 		}
 		return -1;
+	}
 
     public void PrintTheBoard()
 	{
