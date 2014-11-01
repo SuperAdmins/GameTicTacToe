@@ -5,11 +5,12 @@ import java.util.Scanner;
 public class Board
 {
 	private static char board[][];
-
+	private static int counter;
 
 	public Board()
 	{
 		board = new char[4][4];	
+		counter = 0;
 	}
 
 
@@ -53,14 +54,33 @@ public int mode()
     	else if(player == 1)
     	{
     		board[tala1][tala2] = 'X';
-    		return 0;
     	}
     	else if(player == 2)
     	{
     		board[tala1][tala2] = 'O';
-    		return 0;
+    		
     	}
+		counter++;
 
+    	if (counter == 9)
+    	{
+    		return -2;
+    	}
     	return 0;
     }
+
+    	public static int isBoardFull()
+	{
+		for(int i = 1; i < 4; i++)
+		{
+			for(int j = 1; j < 4; j++)
+			{
+				if(board[i][j] == '-')
+				{
+					return 0;
+				}
+			}
+		}
+		return -1;
+	}
 }
