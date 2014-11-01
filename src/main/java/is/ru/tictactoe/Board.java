@@ -43,6 +43,9 @@ public class Board
 		return board;
 	}
 
+	//Inserts the symbol in the correct slot,returns 0 if insertion was a success. 
+	//Returns 1 if there is X or O, already in the slot.
+	//Finally returns 2 if the slots are all full
 	public static int placeMarker(int tala1, int tala2, int player)
     {
 
@@ -59,7 +62,6 @@ public class Board
     		board[tala1][tala2] = 'O';
     		
     	}
-		counter++;
 
     	if (isBoardFull() == 2)
     	{
@@ -68,6 +70,7 @@ public class Board
     	return 0;
     }
 
+    // Checks if the board is full. If it full 2 is returned else 0 is returned
 	public static int isBoardFull()
 	{
 		for(int i = 1; i < 4; i++)
@@ -83,6 +86,7 @@ public class Board
 		return 2;
 	}
 
+	//Prints the contents of the board
     public void PrintTheBoard()
 	{
 		
@@ -104,6 +108,7 @@ public class Board
 
 	}
 
+	//Accepts a variable that is either X or O, to check if that player has won.
 	public static int winConditions(char x_or_o)
 	{
 		if(board[1][1] == x_or_o && board[1][2] == x_or_o && board[1][3] == x_or_o) //row 1 H

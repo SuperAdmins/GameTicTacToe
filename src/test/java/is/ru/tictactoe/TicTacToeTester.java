@@ -18,6 +18,7 @@ public class TicTacToeTester{
 	}
 	
      
+    //Clears the board and inserts "-" in all slots
     @Test 
     public void TestClearBoard()
     {
@@ -25,7 +26,7 @@ public class TicTacToeTester{
         
         char board [][] = b.clearBoard();
         char tmp = '-';
-        assertEquals(tmp,board[1][1]);
+        assertEquals(tmp,board[1][1]);//(Column, Row)
         assertEquals(tmp,board[1][2]);
         assertEquals(tmp,board[1][3]);
         assertEquals(tmp,board[2][1]);
@@ -36,13 +37,16 @@ public class TicTacToeTester{
         assertEquals(tmp,board[3][3]);        
     }
 
+    //Tests the placeMarker function by inserting X or O into slots.
+    //0 if the slot was empty and
+    //1 if the slot was already occupied
     @Test
     public void TestplaceMarker()
     {
         Board b = new Board();
 
         b.clearBoard();
-        assertEquals(0,Board.placeMarker(1,1,1));
+        assertEquals(0,Board.placeMarker(1,1,1)); //(Column, Row, Player)
         assertEquals(1,Board.placeMarker(1,1,1));
         assertEquals(1,Board.placeMarker(1,1,2));
         assertEquals(0,Board.placeMarker(1,2,2));
@@ -51,12 +55,13 @@ public class TicTacToeTester{
 
     }
 
-     @Test 
+    //
+    @Test 
     public void testisBoardFull()
     {
         Board b = new Board();
         b.clearBoard();
-        assertEquals(0,Board.placeMarker(1,1,1));
+        assertEquals(0,Board.placeMarker(1,1,1)); //(Column, Row, Player)
         assertEquals(0,Board.placeMarker(1,2,2));
         assertEquals(0,Board.placeMarker(1,3,1));
         assertEquals(0,Board.placeMarker(2,1,2));
