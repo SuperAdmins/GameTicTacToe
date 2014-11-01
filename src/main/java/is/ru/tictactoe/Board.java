@@ -10,11 +10,10 @@ public class Board
 	public Board()
 	{
 		board = new char[4][4];	
-		counter = 0;
 	}
 
 
-public int mode()
+	public int mode()
 	{
 		System.out.println("**********************");
 		
@@ -44,12 +43,12 @@ public int mode()
 		return board;
 	}
 
-	    public static int placeMarker(int tala1, int tala2, int player)
+	public static int placeMarker(int tala1, int tala2, int player)
     {
 
     	if(board[tala1][tala2] == 'X' || board[tala1][tala2] == 'O')
     	{
-    		return -1;
+    		return 1;
     	}
     	else if(player == 1)
     	{
@@ -62,15 +61,14 @@ public int mode()
     	}
 		counter++;
 
-    	if (counter == 9)
+    	if (isBoardFull() == 2)
     	{
-    		return -2;
+    		return 2;
     	}
     	return 0;
     }
 
-
-    	public static int isBoardFull()
+	public static int isBoardFull()
 	{
 		for(int i = 1; i < 4; i++)
 		{
@@ -82,7 +80,7 @@ public int mode()
 				}
 			}
 		}
-		return -1;
+		return 2;
 	}
 
     public void PrintTheBoard()
@@ -104,5 +102,42 @@ public int mode()
 		
 		System.out.println("        "+"_______");
 
+	}
+
+	public static int winConditions(char x_or_o)
+	{
+		if(board[1][1] == x_or_o && board[1][2] == x_or_o && board[1][3] == x_or_o) //row 1 H
+		{
+			return 1;
+		}
+		else if(board[2][1] == x_or_o && board[2][2] == x_or_o && board[3][3] == x_or_o) //row2 H
+		{
+			return 1;
+		}
+		else if(board[3][1] == x_or_o && board[3][2] == x_or_o && board[3][3] == x_or_o) //row 3 H
+		{
+			return 1;
+		}
+		else if(board[1][1] == x_or_o && board[2][1] == x_or_o && board[3][1] == x_or_o) //column 1 D
+		{
+			return 1;
+		}
+		else if(board[1][2] == x_or_o && board[2][2] == x_or_o && board[3][2] == x_or_o) //column 2 D
+		{
+			return 1;
+		}
+		else if(board[1][3] == x_or_o && board[2][3] == x_or_o && board[3][3] == x_or_o) //column 3 D
+		{
+			return 1;
+		}
+		else if(board[1][1] == x_or_o && board[2][2] == x_or_o && board[3][3] == x_or_o) //cross D R
+		{
+			return 1;
+		}
+		else if(board[3][1] == x_or_o && board[2][2] == x_or_o && board[1][3] == x_or_o) //cross U R
+		{
+			return 1;
+		}
+		return 0;
 	}
 }
