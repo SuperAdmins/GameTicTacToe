@@ -11,16 +11,27 @@ public class MainTest
 	
 		char board[][] = b.clearBoard();
 		
-		while(won != true)
+		while(GameLogic.winConditions('X') != 1 || GameLogic.winConditions('Y') != 1)
 		{
 			int pmNumb = GameLogic.placeMarker(1, 1, 1);
 			pmNumb = GameLogic.placeMarker(2, 1, 2);
 			pmNumb = GameLogic.placeMarker(1, 2, 1);
 			pmNumb = GameLogic.placeMarker(2, 2, 2);
 			pmNumb = GameLogic.placeMarker(1, 3, 2);
-			won = true;
 		}
-		System.out.println("Player one won");
+		
+		if(GameLogic.winConditions('X') != 1)
+		{
+			System.out.println("Player one won");
+		}
+		else if(GameLogic.winConditions('Y') != 1)
+		{
+			System.out.println("Player two won");
+		}
+		else
+		{
+			System.out.println("It's a TIE!");
+		}
 	}
 	
 }
