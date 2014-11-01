@@ -6,6 +6,7 @@ public class Board
 {
 	private static char board[][];
 
+
 	public Board()
 	{
 		board = new char[4][4];	
@@ -41,4 +42,25 @@ public int mode()
 		}
 		return board;
 	}
+
+	    public static int placeMarker(int tala1, int tala2, int player)
+    {
+
+    	if(board[tala1][tala2] == 'X' || board[tala1][tala2] == 'O')
+    	{
+    		return -1;
+    	}
+    	else if(player == 1)
+    	{
+    		board[tala1][tala2] = 'X';
+    		return 0;
+    	}
+    	else if(player == 2)
+    	{
+    		board[tala1][tala2] = 'O';
+    		return 0;
+    	}
+
+    	return 0;
+    }
 }
