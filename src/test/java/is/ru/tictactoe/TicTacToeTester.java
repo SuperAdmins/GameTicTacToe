@@ -16,8 +16,7 @@ public class TicTacToeTester{
 		org.junit.runner.JUnitCore.main("is.ru.tictactoe.TicTacToeTester");
 
 	}
-	
-     
+
     //Clears the board and inserts "-" in all slots
     @Test 
     public void TestClearBoard()

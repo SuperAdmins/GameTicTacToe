@@ -10,7 +10,7 @@ public class GameLogic
 		{
 			return 1;
 		}
-		else if(Board.board[2][1] == x_or_o && Board.board[2][2] == x_or_o && Board.board[3][3] == x_or_o) //row2 H
+		else if(Board.board[2][1] == x_or_o && Board.board[2][2] == x_or_o && Board.board[2][3] == x_or_o) //row2 H
 		{
 			return 1;
 		}
@@ -49,6 +49,7 @@ public class GameLogic
 
     	if(Board.board[tala1][tala2] == 'X' || Board.board[tala1][tala2] == 'O')
     	{
+    		System.out.println("Please choose another number");
     		return 1;
     	}
     	else if(player == 1)

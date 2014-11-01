@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class Board
 {
 	public static char board[][];
+	public static int columnNumb;
+	public static int rowNumb;
 
 	public Board()
 	{
@@ -30,7 +32,7 @@ public class Board
 	}
 
 
-	public char[][] clearBoard()
+	public static char[][] clearBoard()
 	{
 		for(int i = 1; i < 4; i++)
 		{
