@@ -13,11 +13,11 @@ public class MainTest
 		
 		while(won != true)
 		{
-			int pmNumb = Board.placeMarker(1,1,1);
-			pmNumb = Board.placeMarker(2,1,2);
-			pmNumb = Board.placeMarker(1, 2, 1);
-			pmNumb = Board.placeMarker(2, 2, 2);
-			pmNumb = Board.placeMarker(1, 3, 2);
+			int pmNumb = GameLogic.placeMarker(1, 1, 1);
+			pmNumb = GameLogic.placeMarker(2, 1, 2);
+			pmNumb = GameLogic.placeMarker(1, 2, 1);
+			pmNumb = GameLogic.placeMarker(2, 2, 2);
+			pmNumb = GameLogic.placeMarker(1, 3, 2);
 			won = true;
 		}
 		System.out.println("Player one won");

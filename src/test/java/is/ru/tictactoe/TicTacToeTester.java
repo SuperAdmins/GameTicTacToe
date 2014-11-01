@@ -46,12 +46,12 @@ public class TicTacToeTester{
         Board b = new Board();
 
         b.clearBoard();
-        assertEquals(0,Board.placeMarker(1,1,1)); //(Column, Row, Player)
-        assertEquals(1,Board.placeMarker(1,1,1));
-        assertEquals(1,Board.placeMarker(1,1,2));
-        assertEquals(0,Board.placeMarker(1,2,2));
-        assertEquals(1,Board.placeMarker(1,2,1));
-        assertEquals(0,Board.placeMarker(1,3,1));
+        assertEquals(0,GameLogic.placeMarker(1,1,1)); //(Column, Row, Player)
+        assertEquals(1,GameLogic.placeMarker(1,1,1));
+        assertEquals(1,GameLogic.placeMarker(1,1,2));
+        assertEquals(0,GameLogic.placeMarker(1,2,2));
+        assertEquals(1,GameLogic.placeMarker(1,2,1));
+        assertEquals(0,GameLogic.placeMarker(1,3,1));
 
     }
 
@@ -61,15 +61,15 @@ public class TicTacToeTester{
     {
         Board b = new Board();
         b.clearBoard();
-        assertEquals(0,Board.placeMarker(1,1,1)); //(Column, Row, Player)
-        assertEquals(0,Board.placeMarker(1,2,2));
-        assertEquals(0,Board.placeMarker(1,3,1));
-        assertEquals(0,Board.placeMarker(2,1,2));
-        assertEquals(0,Board.placeMarker(2,2,1));
-        assertEquals(0,Board.placeMarker(2,3,2));
-        assertEquals(0,Board.placeMarker(3,1,2));
-        assertEquals(0,Board.placeMarker(3,2,1));
-        assertEquals(2,Board.placeMarker(3,3,2));
+        assertEquals(0,GameLogic.placeMarker(1,1,1)); //(Column, Row, Player)
+        assertEquals(0,GameLogic.placeMarker(1,2,2));
+        assertEquals(0,GameLogic.placeMarker(1,3,1));
+        assertEquals(0,GameLogic.placeMarker(2,1,2));
+        assertEquals(0,GameLogic.placeMarker(2,2,1));
+        assertEquals(0,GameLogic.placeMarker(2,3,2));
+        assertEquals(0,GameLogic.placeMarker(3,1,2));
+        assertEquals(0,GameLogic.placeMarker(3,2,1));
+        assertEquals(2,GameLogic.placeMarker(3,3,2));
 
 
     }
@@ -79,28 +79,28 @@ public class TicTacToeTester{
     {
         Board b = new Board();
         b.clearBoard();
-        assertEquals(0,Board.placeMarker(1,1,1));
-        assertEquals(0,Board.placeMarker(1,2,1));
-        assertEquals(0,Board.placeMarker(1,3,1));
-        assertEquals(1,Board.winConditions('X'));
+        assertEquals(0,GameLogic.placeMarker(1,1,1));
+        assertEquals(0,GameLogic.placeMarker(1,2,1));
+        assertEquals(0,GameLogic.placeMarker(1,3,1));
+        assertEquals(1,GameLogic.winConditions('X'));
 
         b.clearBoard();
-        assertEquals(0,Board.placeMarker(1,1,2));
-        assertEquals(0,Board.placeMarker(1,2,2));
-        assertEquals(0,Board.placeMarker(1,3,2));
-        assertEquals(1,Board.winConditions('O'));
+        assertEquals(0,GameLogic.placeMarker(1,1,2));
+        assertEquals(0,GameLogic.placeMarker(1,2,2));
+        assertEquals(0,GameLogic.placeMarker(1,3,2));
+        assertEquals(1,GameLogic.winConditions('O'));
 
         b.clearBoard();
-        assertEquals(0,Board.placeMarker(1,1,2));
-        assertEquals(0,Board.placeMarker(2,1,2));
-        assertEquals(0,Board.placeMarker(3,1,2));
-        assertEquals(1,Board.winConditions('O'));
+        assertEquals(0,GameLogic.placeMarker(1,1,2));
+        assertEquals(0,GameLogic.placeMarker(2,1,2));
+        assertEquals(0,GameLogic.placeMarker(3,1,2));
+        assertEquals(1,GameLogic.winConditions('O'));
 
         b.clearBoard();
-        assertEquals(0,Board.placeMarker(1,1,1));
-        assertEquals(0,Board.placeMarker(2,2,1));
-        assertEquals(0,Board.placeMarker(3,3,1));
-        assertEquals(1,Board.winConditions('X'));
+        assertEquals(0,GameLogic.placeMarker(1,1,1));
+        assertEquals(0,GameLogic.placeMarker(2,2,1));
+        assertEquals(0,GameLogic.placeMarker(3,3,1));
+        assertEquals(1,GameLogic.winConditions('X'));
     }
 
 }
