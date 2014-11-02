@@ -79,97 +79,97 @@ public class TicTacToeTester{
       assertEquals(0,GameLogic.placeMarker(1,1,1));
       assertEquals(0,GameLogic.placeMarker(1,2,1));
       assertEquals(0,GameLogic.placeMarker(1,3,1));
-      assertEquals(1,GameLogic.winConditions('X'));
+      assertEquals(1,GameLogic.winConditions('X'));//Row 1 player 1
 
       b.clearBoard();
       assertEquals(0,GameLogic.placeMarker(1,1,2));
       assertEquals(0,GameLogic.placeMarker(1,2,2));
       assertEquals(0,GameLogic.placeMarker(1,3,2));
-      assertEquals(1,GameLogic.winConditions('O'));
+      assertEquals(1,GameLogic.winConditions('O'));//Row 2 player 2
       
       b.clearBoard();
       assertEquals(0,GameLogic.placeMarker(2,1,1));
       assertEquals(0,GameLogic.placeMarker(2,2,1));
       assertEquals(0,GameLogic.placeMarker(2,3,1));
-      assertEquals(1,GameLogic.winConditions('X'));
+      assertEquals(1,GameLogic.winConditions('X'));//Row 2 player 1
 
       b.clearBoard();
       assertEquals(0,GameLogic.placeMarker(2,1,2));
       assertEquals(0,GameLogic.placeMarker(2,2,2));
       assertEquals(0,GameLogic.placeMarker(2,3,2));
-      assertEquals(1,GameLogic.winConditions('O'));
+      assertEquals(1,GameLogic.winConditions('O'));//Row 2 player 2
       
       b.clearBoard();
       assertEquals(0,GameLogic.placeMarker(3,1,1));
       assertEquals(0,GameLogic.placeMarker(3,2,1));
       assertEquals(0,GameLogic.placeMarker(3,3,1));
-      assertEquals(1,GameLogic.winConditions('X'));
+      assertEquals(1,GameLogic.winConditions('X'));//Row 3 player 1
 
       b.clearBoard();
       assertEquals(0,GameLogic.placeMarker(3,1,2));
       assertEquals(0,GameLogic.placeMarker(3,2,2));
       assertEquals(0,GameLogic.placeMarker(3,3,2));
-      assertEquals(1,GameLogic.winConditions('O'));
+      assertEquals(1,GameLogic.winConditions('O'));//Row 3 player 2
 
       b.clearBoard();
       assertEquals(0,GameLogic.placeMarker(1,1,1));
       assertEquals(0,GameLogic.placeMarker(2,1,1));
       assertEquals(0,GameLogic.placeMarker(3,1,1));
-      assertEquals(1,GameLogic.winConditions('X'));
+      assertEquals(1,GameLogic.winConditions('X'));//Column 1 player 1
       
       b.clearBoard();
       assertEquals(0,GameLogic.placeMarker(1,1,2));
       assertEquals(0,GameLogic.placeMarker(2,1,2));
       assertEquals(0,GameLogic.placeMarker(3,1,2));
-      assertEquals(1,GameLogic.winConditions('O'));
+      assertEquals(1,GameLogic.winConditions('O'));//Column 1 player 2
       
       b.clearBoard();
       assertEquals(0,GameLogic.placeMarker(1,2,1));
       assertEquals(0,GameLogic.placeMarker(2,2,1));
       assertEquals(0,GameLogic.placeMarker(3,2,1));
-      assertEquals(1,GameLogic.winConditions('X'));
+      assertEquals(1,GameLogic.winConditions('X'));//Column 2 player 1
       
       b.clearBoard();
       assertEquals(0,GameLogic.placeMarker(1,2,2));
       assertEquals(0,GameLogic.placeMarker(2,2,2));
       assertEquals(0,GameLogic.placeMarker(3,2,2));
-      assertEquals(1,GameLogic.winConditions('O'));
+      assertEquals(1,GameLogic.winConditions('O'));//Column 2 player 2
       
       b.clearBoard();
       assertEquals(0,GameLogic.placeMarker(1,3,1));
       assertEquals(0,GameLogic.placeMarker(2,3,1));
       assertEquals(0,GameLogic.placeMarker(3,3,1));
-      assertEquals(1,GameLogic.winConditions('X'));
+      assertEquals(1,GameLogic.winConditions('X'));//Column 3 player 1
       
       b.clearBoard();
       assertEquals(0,GameLogic.placeMarker(1,3,2));
       assertEquals(0,GameLogic.placeMarker(2,3,2));
       assertEquals(0,GameLogic.placeMarker(3,3,2));
-      assertEquals(1,GameLogic.winConditions('O'));
+      assertEquals(1,GameLogic.winConditions('O'));//Column 3 player 2
 
       b.clearBoard();
       assertEquals(0,GameLogic.placeMarker(1,1,1));
       assertEquals(0,GameLogic.placeMarker(2,2,1));
       assertEquals(0,GameLogic.placeMarker(3,3,1));
-      assertEquals(1,GameLogic.winConditions('X'));
+      assertEquals(1,GameLogic.winConditions('X'));//Cross Top left -> bottom right player 1
       
       b.clearBoard();
       assertEquals(0,GameLogic.placeMarker(1,1,2));
       assertEquals(0,GameLogic.placeMarker(2,2,2));
       assertEquals(0,GameLogic.placeMarker(3,3,2));
-      assertEquals(1,GameLogic.winConditions('O'));
+      assertEquals(1,GameLogic.winConditions('O'));//Cross Top left -> bottom right player 2
       
       b.clearBoard();
       assertEquals(0,GameLogic.placeMarker(1,3,1));
       assertEquals(0,GameLogic.placeMarker(2,2,1));
       assertEquals(0,GameLogic.placeMarker(3,1,1));
-      assertEquals(1,GameLogic.winConditions('X'));
+      assertEquals(1,GameLogic.winConditions('X'));//Cross Top right -> bottom left player 1
       
       b.clearBoard();
       assertEquals(0,GameLogic.placeMarker(1,3,2));
       assertEquals(0,GameLogic.placeMarker(2,2,2));
       assertEquals(0,GameLogic.placeMarker(3,1,2));
-      assertEquals(1,GameLogic.winConditions('O'));
+      assertEquals(1,GameLogic.winConditions('O'));//Cross Top right -> bottom left player 2
   }
 
    /* @Test
