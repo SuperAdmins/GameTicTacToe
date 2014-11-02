@@ -11,25 +11,7 @@ public class Board
 		board = new char[4][4];	
 	}
 
-
-	/*public static int mode(String num)
-	{
-		System.out.println("**********************");
-		
-		System.out.println("     "+"Tic Tac Toe");
-		
-		System.out.println("**********************");
-		
-		System.out.println("For one player mode enter: 1");
-		
-		System.out.println("For two player mode enter: 2");
-		
-		int mode = Integer.parseInt(num);
-		
-		return mode;
-	}*/
-
-
+	//Clears the board and inserts a "-" symbol in its place
 	public char[][] clearBoard()
 	{
 		for(int i = 1; i < 4; i++)
@@ -70,13 +52,10 @@ public class Board
 			
 			for(int j = 1; j < 4; j++)
 			{
-				System.out.print(board[i][j] + "|");
-				
+				System.out.print(board[i][j] + "|");	
 			}
 			System.out.println();
 		}
-		
 		System.out.println("        "+"_______");
-
 	}
 }
