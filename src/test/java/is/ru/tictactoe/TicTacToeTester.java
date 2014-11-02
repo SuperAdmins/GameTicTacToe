@@ -172,11 +172,18 @@ public class TicTacToeTester{
       assertEquals(1,GameLogic.winConditions('O'));//Cross Top right -> bottom left player 2
   }
 
-   /* @Test
-    public void testMode()
+    @Test
+    public void testinputNumber()
     {
-         assertEquals(1, Board.mode("1"));
-         assertEquals(2, Board.mode("2"));
-    }*/
+        String input = "3 2 1 -4 z % 5";
+        Scanner s = new Scanner(input);
+        assertEquals(3,s.nextInt());
+        assertEquals(2,GameLogic.inputNumber(s));
+        assertEquals(1,GameLogic.inputNumber(s));
+        assertEquals(0,GameLogic.inputNumber(s));
+        assertEquals(0,GameLogic.inputNumber(s));
+        assertEquals(0,GameLogic.inputNumber(s));
+        assertEquals(0,GameLogic.inputNumber(s));
+    }
 
 }
