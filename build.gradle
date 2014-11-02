@@ -3,7 +3,7 @@
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
 apply plugin: 'application'
-mainClassName = "is.ru.tictactoe.MainTest"
+mainClassName = "is.ru.tictactoe.Main"
 
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -16,7 +16,7 @@ jar
 {
    	manifest
 	{
-		attributes("Main-Class": "is.ru.tictactoe.MainTest")
+		attributes("Main-Class": "is.ru.tictactoe.Main")
 	}
 }
 
