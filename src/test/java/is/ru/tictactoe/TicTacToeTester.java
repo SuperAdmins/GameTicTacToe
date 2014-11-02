@@ -69,8 +69,6 @@ public class TicTacToeTester{
         assertEquals(0,GameLogic.placeMarker(3,1,2));
         assertEquals(0,GameLogic.placeMarker(3,2,1));
         assertEquals(2,GameLogic.placeMarker(3,3,2));
-
-
     }
 
     @Test
@@ -100,6 +98,13 @@ public class TicTacToeTester{
         assertEquals(0,GameLogic.placeMarker(2,2,1));
         assertEquals(0,GameLogic.placeMarker(3,3,1));
         assertEquals(1,GameLogic.winConditions('X'));
+    }
+
+    @Test
+    public void testMode()
+    {
+         assertEquals(1, Board.mode("1"));
+         assertEquals(2, Board.mode("2"));
     }
 
 }

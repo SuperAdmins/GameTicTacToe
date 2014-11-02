@@ -5,8 +5,6 @@ import java.util.Scanner;
 public class Board
 {
 	public static char board[][];
-	public static int columnNumb;
-	public static int rowNumb;
 
 	public Board()
 	{
@@ -14,7 +12,7 @@ public class Board
 	}
 
 
-	public int mode()
+	public static int mode(String num)
 	{
 		System.out.println("**********************");
 		
@@ -26,13 +24,13 @@ public class Board
 		
 		System.out.println("For two player mode enter: 2");
 		
-		Scanner in = new Scanner(System.in);
-		int num = in.nextInt();
-		return num;
+		int mode = Integer.parseInt(num);
+		
+		return mode;
 	}
 
 
-	public static char[][] clearBoard()
+	public char[][] clearBoard()
 	{
 		for(int i = 1; i < 4; i++)
 		{
@@ -43,8 +41,6 @@ public class Board
 		}
 		return board;
 	}
-
-	
 
     // Checks if the board is full. If it full 2 is returned else 0 is returned
 	public static int isBoardFull()
