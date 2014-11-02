@@ -42,30 +42,35 @@ public class GameLogic
 		return 0;
 	}
 
-	public static int inputNumber(Scanner sc){
-			try{
-			int x = sc.nextInt();
-			if (x < 4 && x > 0){
-				return x;
-			}
-			else{
-				System.out.println("Number was not between 1-3. Please choose another number");
-			}
-			}
-				catch(InputMismatchException ex){
-				System.out.println("This is not a valid number. Please choose a number between 1-3");
-				sc.next();
-				
+	//Checks if the input is between 1-3 and throws and exception if its anything other than an INT type.
+	public static int inputNumber(Scanner sc)
+	{
+			try
+			{
+				int x = sc.nextInt();
+				if (x < 4 && x > 0)
+				{
+					return x;
 				}
-			return 0;
+				else
+				{
+					System.out.println("Number was not between 1-3. Please choose another number");
+				}
+
+				}
+					catch(InputMismatchException ex){
+					System.out.println("This is not a valid number. Please choose a number between 1-3");
+					sc.next();
+					
 			}
+			return 0;
+	}
 
 	//Inserts the symbol in the correct slot,returns 0 if insertion was a success. 
 	//Returns 1 if there is X or O, already in the slot.
 	//Finally returns 2 if the slots are all full
 	public static int placeMarker(int tala1, int tala2, int player)
     {
-    	if (tala1 > 0 && tala1 < 4 && tala2 > 0 && tala2 < 4 ){
 	    	if(Board.board[tala1][tala2] == 'X' || Board.board[tala1][tala2] == 'O')
 	    	{
 	    		System.out.println(" This spot is already taken. Please choose another number");
@@ -86,8 +91,6 @@ public class GameLogic
 	    		return 2;
 	    	}
 	    	return 0;
-	    }
-	    return 1;
 	}
 
 }
