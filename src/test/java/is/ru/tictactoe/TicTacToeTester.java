@@ -161,14 +161,18 @@ public class TicTacToeTester{
         b.clearBoard();
         assertEquals(0,GameLogic.placeMarker(1,3,1));
         assertEquals(0,GameLogic.placeMarker(2,2,1));
+        assertEquals(0,GameLogic.winConditions('X'));
         assertEquals(0,GameLogic.placeMarker(3,1,1));
         assertEquals(1,GameLogic.winConditions('X'));//Cross Top right -> bottom left player 1
       
         b.clearBoard();
         assertEquals(0,GameLogic.placeMarker(1,3,2));
         assertEquals(0,GameLogic.placeMarker(2,2,2));
+        assertEquals(0,GameLogic.winConditions('O'));
         assertEquals(0,GameLogic.placeMarker(3,1,2));
         assertEquals(1,GameLogic.winConditions('O'));//Cross Top right -> bottom left player 2
+
+        
     }
 
     @Test
