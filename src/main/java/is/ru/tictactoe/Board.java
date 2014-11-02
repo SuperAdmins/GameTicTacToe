@@ -12,7 +12,7 @@ public class Board
 	}
 
 
-	public static int mode(String num)
+	/*public static int mode(String num)
 	{
 		System.out.println("**********************");
 		
@@ -27,7 +27,7 @@ public class Board
 		int mode = Integer.parseInt(num);
 		
 		return mode;
-	}
+	}*/
 
 
 	public char[][] clearBoard()

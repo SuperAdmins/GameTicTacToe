@@ -100,11 +100,11 @@ public class TicTacToeTester{
         assertEquals(1,GameLogic.winConditions('X'));
     }
 
-    @Test
+   /* @Test
     public void testMode()
     {
          assertEquals(1, Board.mode("1"));
          assertEquals(2, Board.mode("2"));
-    }
+    }*/
 
 }

@@ -18,10 +18,17 @@ public class MainTest
   
   while(GameLogic.winConditions('X') != 1 && GameLogic.winConditions('O') != 1 && test != 2)
   {
-   System.out.println("Input Text");
-   int x = sc.nextInt();
-       int y = sc.nextInt();
-
+    int x = 0;
+	  int y = 0;
+   System.out.println("Input A Number Between 1-3");
+   while (x == 0){
+		System.out.println("Player " + player + " Input a row number");
+    x = GameLogic.inputNumber(sc);
+   }
+   while(y == 0){
+	   System.out.println("Player " + player + " Input a column number");
+    y = GameLogic.inputNumber(sc);
+   }
        if(player == 1)
        {
        	test = GameLogic.placeMarker(x,y,1);
