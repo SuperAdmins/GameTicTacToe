@@ -1,0 +1,5 @@
+#!/bin/bash
+
+gradle clean build check test jacocoTestReport
+
+gradle build jacocoTestReport
