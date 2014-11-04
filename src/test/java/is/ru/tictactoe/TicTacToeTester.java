@@ -42,7 +42,7 @@ public class TicTacToeTester{
     public void TestplaceMarker()
     {
         Board b = new Board();
-
+	//comment
         b.clearBoard();
         assertEquals(0,GameLogic.placeMarker(1,1,1)); //(Column, Row, Player)
         assertEquals(1,GameLogic.placeMarker(1,1,1));
